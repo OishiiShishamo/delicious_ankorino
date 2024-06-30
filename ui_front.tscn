@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bmiv4ggp2es1j"]
+
+[node name="ui_front" type="RigidBody2D"]
+gravity_scale = 0.0

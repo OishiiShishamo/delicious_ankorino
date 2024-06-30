@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://chum0cffjy0rw"]
+
+[ext_resource type="PackedScene" uid="uid://gq3vbna6mso8" path="res://boss.tscn" id="1_vib7f"]
+[ext_resource type="Script" path="res://screen.gd" id="1_xtbmv"]
+[ext_resource type="PackedScene" uid="uid://btcq5g7otne7t" path="res://ui_back.tscn" id="1_xxaex"]
+[ext_resource type="PackedScene" uid="uid://wmvqp562rnio" path="res://player.tscn" id="3_byiod"]
+[ext_resource type="PackedScene" uid="uid://bjir4ecn52ocx" path="res://death_rect1.tscn" id="5_83s0l"]
+
+[node name="screen" type="RigidBody2D"]
+position = Vector2(640, 480)
+gravity_scale = 0.0
+script = ExtResource("1_xtbmv")
+
+[node name="ui_back" parent="." instance=ExtResource("1_xxaex")]
+
+[node name="Boss" parent="." instance=ExtResource("1_vib7f")]
+position = Vector2(0, -260)
+
+[node name="player" parent="." instance=ExtResource("3_byiod")]
+position = Vector2(0, 140)
+gravity_scale = 1.0
+
+[node name="death_rect1" parent="." instance=ExtResource("5_83s0l")]
+max_contacts_reported = 8
+contact_monitor = true
+
+[connection signal="body_entered" from="death_rect1" to="death_rect1" method="_on_body_entered"]

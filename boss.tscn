@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://gq3vbna6mso8"]
+
+[ext_resource type="Script" path="res://boss.gd" id="1_twbax"]
+[ext_resource type="Texture2D" uid="uid://cnts0tvvt88be" path="res://img/boss.png" id="1_y6lvp"]
+
+[node name="boss" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_twbax")
+
+[node name="Graph" type="Sprite2D" parent="."]
+texture = ExtResource("1_y6lvp")

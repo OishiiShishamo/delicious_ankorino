@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://n6jph246nmvx"]
+
+[ext_resource type="Script" path="res://bulletmng.gd" id="1_h6fe7"]
+
+[node name="bulletmng" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_h6fe7")

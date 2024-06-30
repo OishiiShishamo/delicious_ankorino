@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dp0mda48ahrvl"]
+
+[node name="window_gra" type="RigidBody2D"]
+gravity_scale = 0.0

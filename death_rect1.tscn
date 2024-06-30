@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjir4ecn52ocx"]
+
+[ext_resource type="Script" path="res://death_rect1.gd" id="1_2njbb"]
+
+[node name="death_rect1" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_2njbb")
+
+[node name="polygon" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="polygon"]

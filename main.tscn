@@ -1,0 +1,21 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhkmgbs61er5e"]
+
+[ext_resource type="PackedScene" uid="uid://chum0cffjy0rw" path="res://screen.tscn" id="1_teerx"]
+[ext_resource type="Script" path="res://main.gd" id="1_u456o"]
+[ext_resource type="PackedScene" uid="uid://ci5rcvko1bh1p" path="res://background.tscn" id="2_uwdq0"]
+[ext_resource type="PackedScene" uid="uid://b83t5x5p04rwr" path="res://flash.tscn" id="3_v8o7y"]
+[ext_resource type="PackedScene" uid="uid://c0yjuhci8ca1w" path="res://bgm.tscn" id="4_pi3q6"]
+[ext_resource type="PackedScene" uid="uid://dp0mda48ahrvl" path="res://window_gra.tscn" id="6_dk1ij"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_u456o")
+
+[node name="background" parent="." instance=ExtResource("2_uwdq0")]
+
+[node name="screen" parent="." instance=ExtResource("1_teerx")]
+
+[node name="flash" parent="." instance=ExtResource("3_v8o7y")]
+
+[node name="bgm" parent="." instance=ExtResource("4_pi3q6")]
+
+[node name="window_gra" parent="." instance=ExtResource("6_dk1ij")]

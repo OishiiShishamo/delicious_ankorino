@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://wmvqp562rnio"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_u02at"]
+[ext_resource type="Texture2D" uid="uid://810i1bu81ggv" path="res://img/player.png" id="1_xcjxd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rbdii"]
+radius = 50.0
+
+[node name="player" type="RigidBody2D"]
+gravity_scale = 0.0
+max_contacts_reported = 8
+contact_monitor = true
+script = ExtResource("1_u02at")
+
+[node name="Graph" type="Sprite2D" parent="."]
+texture = ExtResource("1_xcjxd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rbdii")
